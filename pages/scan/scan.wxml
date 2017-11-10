@@ -1,0 +1,24 @@
+<!--pages/scan/scan.wxml-->
+<scroll-view>
+<view class='scan_view'>
+  <view class="result">
+    <text class="result_text">蓝牙状态监听：{{bleStatus}}</text>
+    <text class="result_text">蓝牙初始化：{{bleAdapterStatus}}</text>
+    <text class="result_text">当前连接的设备：{{bleChipInfo.name}}-{{bleChipInfo.deviceId}}</text>
+  </view>
+  <button type='primary' class='btn_scan' bindtap='onScanClick'>扫描</button>
+
+  <text class='.scan_result_title'>扫描结果</text>
+  
+  <view wx:if="{{!bleConnSuccess}}" class='scan_result' wx:for="{{bleChips}}">
+     <text class="result_text">{{index}}-{{item.name}}-{{item.deviceId}}</text>
+     <button bindtap='onConnBle' data-item='{{item}}'>连接</button>
+  </view>
+
+  <view wx:if="{{bleConnSuccess}}" class='notify_result'>
+  <text>notify data: </text>
+  <text class='notify_result_data'>{{bleNotifyData}}</text>
+  </view>
+</view>
+
+</scroll-view>

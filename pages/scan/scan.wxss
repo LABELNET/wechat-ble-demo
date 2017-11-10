@@ -1,0 +1,55 @@
+/* pages/scan/scan.wxss */
+.scan_view{
+  margin: 16px;
+}
+.result{
+  padding: 16px;
+  direction: flex;
+  flex-direction: column;
+  background-color: gainsboro;
+  box-shadow: 0 3px 3px 0 gainsboro;
+  height:100px;
+  width: 90%;
+  flex-wrap:nowrap;
+}
+
+.result_text{
+  width: 100%;
+  height: 20px;
+  color: black;
+  font-size: 14px;
+  display: block;
+}
+
+.btn_scan{
+  margin-top: 16px
+}
+
+.scan_result_title{
+  color: black;
+  font-size: 14px;
+  display: block;
+  margin-top: 16px;
+}
+.scan_result{
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  background-color: gainsboro;
+  height: 50px;
+  margin-top: 8px;
+}
+
+.notify_result{
+  display: flex;
+  flex-direction: column;
+  background-color: gainsboro;
+  box-shadow: 0 3px 3px 0 gainsboro;
+  margin: 16px;
+  padding: 16px;
+}
+
+.notify_result_data{
+  font-size: 12px;
+  display: block;
+}
